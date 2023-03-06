@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <!-- Importando CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Primeira questão -->
+        <div class="card my-5">
+            <div class="card-header  text-justify">
+                <h2>Questao 1</h2>
+
+                <p>Observe o trecho de código abaixo:</p>
+
+                <p>int INDICE = 13, SOMA = 0, K = 0;</p>
+
+                <p>enquanto K < INDICE faça { K=K + 1; SOMA=SOMA + K; } imprimir(SOMA);</p>
+
+                        <p>
+                            Ao final do processamento, qual será o valor da variável SOMA?
+                        </p>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="valor">Resultado:</label>
+                        <input type="number" disabled class="form-control w-25" id="q1">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Segunda questão -->
+        <div class="card my-5">
+            <div class="card-header text-justify">
+                <h2>Questao 2</h2>
+
+                <p>Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2
+                    valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem
+                    que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem
+                    avisando se o número informado pertence ou não a sequência</p>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="indice">Informe um índice:</label>
+                        <input type="number" class="form-control" id="nFibonacci" placeholder="Digite aqui o índice">
+                    </div>
+                    <button type="button" id="btnFib" class="btn btn-primary">Calcular</button>
+                </form>
+                <div id="resultadoFibonacci" class="mt-3"></div>
+            </div>
+        </div>
+
+        <div class="card my-5">
+            <div class="card-header text-justify">
+                <h2>Questao 3</h2>
+
+                <p>Dado um vetor que guarda o valor de faturamento diário de uma distribuidora, faça um programa, na
+                    linguagem que desejar, que calcule e retorne:</p>
+
+                <ul>
+                    <li> O menor valor de faturamento ocorrido em um dia do mês;</li>
+                    <li>O maior valor de faturamento ocorrido em um dia do mês;
+                    </li>
+                    <li>Número de dias no mês em que o valor de faturamento diário foi superior à média mensal.</li>
+                </ul>
+
+                <h6>IMPORTANTE:</h6>
+                <ul>
+
+                    <li> Usar o json ou xml disponível como fonte dos dados do faturamento mensal;</li>
+                    <li> Podem existir dias sem faturamento, como nos finais de semana e feriados. Estes dias devem
+                        ser ignorados no cálculo da média;</li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="w-75 m-auto">
+                    <canvas id="g1"></canvas>
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <ul>
+                    <li class="mt-3">O dia com menor faturamento foi dia <span id="minDia"></span>, com o valor de R$<span
+                            id="minValor"></span></li>
+                    <li class="mt-3">O dia com maior faturamento foi dia <span id="maxDia"></span>, com valor de R$<span
+                            id="maxValor"></span></li>
+                    <li class="mt-3">Foram <span id="med"></span> dias em que o valor de faturamento diário foi superior
+                        à média mensal</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card my-5">
+            <div class="card-header  text-justify">
+                <h2>Questao 4</h2>
+
+                <p>Dado o valor de faturamento mensal de uma distribuidora, detalhado por estado:</p>
+                <ul>
+
+                    <li>SP – R$67.836,43</li>
+                    <li>RJ – R$36.678,66</li>
+                    <li>MG – R$29.229,88</li>
+                    <li>ES – R$27.165,48</li>
+                    <li>Outros – R$19.849,53</li>
+                </ul>
+
+                <p>
+                    Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada
+                    estado
+                    teve dentro do valor total mensal da distribuidora.
+                </p>
+                 
+            </div>
+            <div class="card-body">
+                <div class="w-50 m-auto">
+                    <canvas id="g2"> </canvas>
+                </div>
+            </div>
+            <div class="card-footer">
+                <ul id="estados">
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="card my-5">
+            <div class="card-header text-justify">
+                <h2>Questao 5</h2>
+
+                <p> Escreva um programa que inverta os caracteres de um string.</p>
+
+                <h6>IMPORTANTE:</h6>
+
+                <ul>
+                    <li>Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser
+                        previamente definida no código;</li>
+                    <li>Evite usar funções prontas, como, por exemplo, reverse;</li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="indice">Informe um índice:</label>
+                        <input type="text" class="form-control" id="stringInverter" placeholder="Digite a frase que deseja inverter">
+                    </div>
+                    <button type="button" id="btnInverte" class="btn btn-primary">Inverter</button>
+                </form>
+                <div id="resultadoInverte" class="mt-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Importando JavaScript do Bootstrap e dos exercícios -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
